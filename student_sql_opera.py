@@ -19,24 +19,19 @@ import os
 数据库文件，而是直接打开该数据库文件。
     连接对象可以是硬盘上面的数据库文件，也可以是建立在内存中的，在内存中的数据库
     执行完任何操作后，都不需要提交事务的(commit)
-
     创建在硬盘上面： conn = sqlite3.connect('c:\\test\\test.db')
     创建在内存上面： conn = sqlite3.connect('"memory:')
-
     下面我们一硬盘上面创建数据库文件为例来具体说明：
     conn = sqlite3.connect('c:\\test\\hongten.db')
     其中conn对象是数据库链接对象，而对于数据库链接对象来说，具有以下操作：
-
         commit()            --事务提交
         rollback()          --事务回滚
         close()             --关闭一个数据库链接
         cursor()            --创建一个游标
-
     cu = conn.cursor()
     这样我们就创建了一个游标对象：cu
     在sqlite3中，所有sql语句的执行都要在游标对象的参与下完成
     对于游标对象cu，具有以下具体操作：
-
         execute()           --执行一条sql语句
         executemany()       --执行多条sql语句
         close()             --游标关闭
@@ -44,7 +39,6 @@ import os
         fetchmany()         --从结果中取出多条记录
         fetchall()          --从结果中取出所有记录
         scroll()            --游标滚动
-
 '''
 
 # global var

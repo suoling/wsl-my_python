@@ -11,14 +11,19 @@ html = """
 and they lived at the bottom of a well.</p>
 <p class="story">...</p>
 """
-
+# 按照标准的缩进格式的结构输出
 soup = BeautifulSoup(html, "html.parser")
 
+# 将Beautiful Soup的文档树格式化后以Unicode编码输出,
+# 每个XML/HTML标签都独占一行
 # print(soup.prettify())
+
+# 从文档中找到所有<a>标签的链接
 # print(soup.find_all('a'))
 
 for link in soup.find_all('a'):
-    #获取 link 的  href 属性内容
+    # 获取link的href属性内容
     print(link.get('href'))
+    # 获取link的文字内容
     print(link.get_text())
 

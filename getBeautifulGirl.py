@@ -183,7 +183,7 @@ def init():
     print('show_sql : {}'.format(SHOW_SQL))
     # 如果存在数据库表，则删除表
     drop_table_test()
-    # 创建数据库表student
+    # 创建数据库表beautifulGirl
     create_table_test()
     # 向数据库表中插入数据
     save_test()
